@@ -1,8 +1,8 @@
 # Project with automated tests
 
 # Jenkins job
-<a target="_blank" href="https://jenkins.autotests.cloud/job/08-ar2507-habr/">Jenkins demo Habr UI Tests</a>
 
+<a target="_blank" href="https://jenkins.autotests.cloud/job/08-ar2507-habr/">Jenkins demo Habr UI Tests</a>
 
 # USAGE examples
 
@@ -16,18 +16,20 @@
 * videoStorage (url address where you should get video)
 * threads (number of threads)
 
-
 Run tests with filled remote.properties:
+
 ```bash
 gradle clean test
 ```
 
 Run tests with not filled remote.properties:
+
 ```bash
 gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
 ```
 
 Serve report:
+
 ```bash
 allure serve build/allure-results
 ```

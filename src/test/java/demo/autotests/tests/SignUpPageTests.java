@@ -1,5 +1,6 @@
 package demo.autotests.tests;
 
+import demo.autotests.config.Project;
 import demo.autotests.pages.MainPage;
 import demo.autotests.pages.SignInPage;
 import demo.autotests.pages.SignUpPage;
@@ -9,8 +10,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static demo.autotests.config.Project.config;
-
 @Tag("SignUpPageTests")
 @Epic("Sign Up page tests")
 public class SignUpPageTests extends BaseTest {
@@ -18,9 +17,9 @@ public class SignUpPageTests extends BaseTest {
     MainPage mainPage = new MainPage();
     SignUpPage signUpPage = new SignUpPage();
 
-    String email = config.email();
-    String password = config.password();
-    String nickName = config.nickName();
+    String email = Project.config.email();
+    String password = Project.config.password();
+    String nickName = Project.config.nickName();
 
     @Test
     @DisplayName("User can sign up")

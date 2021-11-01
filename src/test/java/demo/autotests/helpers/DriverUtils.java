@@ -1,7 +1,7 @@
 package demo.autotests.helpers;
 
-import demo.autotests.config.Project;
 import com.codeborne.selenide.Selenide;
+import demo.autotests.config.Project;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;

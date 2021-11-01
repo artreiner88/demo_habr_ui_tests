@@ -11,6 +11,7 @@ public enum MainNavBarItem {
     POP_SCIENCE("Научпоп");
 
     private String title;
+
     MainNavBarItem(String title) {
         this.title = title;
     }

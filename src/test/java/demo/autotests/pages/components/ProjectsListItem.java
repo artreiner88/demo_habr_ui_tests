@@ -8,6 +8,7 @@ public enum ProjectsListItem {
     FREELANCE("Фриланс");
 
     private String title;
+
     ProjectsListItem(String title) {
         this.title = title;
     }

@@ -18,7 +18,7 @@ public class GeneratedTests extends BaseTest {
     @DisplayName("Page title should have header text")
     void titleTest() {
         step("Open url 'https://habr.com/ru'", () ->
-            open("https://habr.com/ru"));
+                open("https://habr.com/ru"));
 
         step("Page title should have text 'Все публикации подряд / Хабр'", () -> {
             String expectedTitle = "Все публикации подряд / Хабр";
@@ -33,7 +33,7 @@ public class GeneratedTests extends BaseTest {
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
         step("Open url 'https://habr.com/ru'", () ->
-            open("https://habr.com/ru"));
+                open("https://habr.com/ru"));
 
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
