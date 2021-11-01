@@ -105,7 +105,7 @@ public class MainPage {
         rulesLink.shouldBe(visible);
     }
 
-    @Step("Check Logged Out User menu items")
+    @Step("Check Logged In User menu items")
     public void checkLoggedInUserMenuItems(String nickName) {
         userProfileIcon.click();
         signInButton.shouldNotBe(visible);
