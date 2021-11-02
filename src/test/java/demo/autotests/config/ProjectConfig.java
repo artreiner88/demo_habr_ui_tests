@@ -19,15 +19,21 @@ public interface ProjectConfig extends Config {
     @DefaultValue("1920x1080")
     String browserSize();
 
+    @DefaultValue("")
     String remoteDriverUrl();
 
+    @DefaultValue("")
     String videoStorage();
 
+    @DefaultValue("")
     String email();
 
+    @DefaultValue("")
     String notExistedEmail();
 
+    @DefaultValue("")
     String password();
 
+    @DefaultValue("")
     String nickName();
 }
