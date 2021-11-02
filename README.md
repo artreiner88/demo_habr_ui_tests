@@ -31,5 +31,5 @@ gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -D
 Serve report:
 
 ```bash
-allure serve build/allure-results
+gradle allureServe
 ```
