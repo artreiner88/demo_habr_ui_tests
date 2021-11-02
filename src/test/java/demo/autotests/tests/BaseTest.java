@@ -40,7 +40,7 @@ public class BaseTest {
         Selenide.closeWebDriver();
 
         if (Project.isVideoOn()) {
-//            AllureAttachments.addVideo(sessionId);
+            AllureAttachments.addVideo(sessionId);
         }
     }
 }
