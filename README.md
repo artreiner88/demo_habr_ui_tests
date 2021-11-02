@@ -14,11 +14,15 @@
 
 ![alt text](images/jenkins_project.png)
 
-# Allure generates an informative report after each tests run
+# Allure generates an informative report after each tests' run
 
 ![alt text](images/allure_1.png)
 
 ![alt text](images/allure_2.png)
+
+# And Telegram bot sends notifications to whom it may concern with Allure report URL
+
+![alt text](images/telegram_bot.png)
 
 # USAGE examples
 

@@ -1,11 +1,8 @@
 package demo.autotests.helpers;
 
 import io.qameta.allure.Attachment;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class AllureAttachments {
-    public static final Logger LOGGER = LoggerFactory.getLogger(AllureAttachments.class);
 
     @Attachment(value = "{attachName}", type = "text/plain")
     private static String addMessage(String attachName, String text) {
@@ -27,7 +24,8 @@ public class AllureAttachments {
     }
 
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
-    public static String addVideo(String sessionId) {
+    public static String addVideo() {
+        String sessionId = DriverUtils.getSessionId();
         return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
                 + DriverUtils.getVideoUrl(sessionId)
                 + "' type='video/mp4'></video></body></html>";
