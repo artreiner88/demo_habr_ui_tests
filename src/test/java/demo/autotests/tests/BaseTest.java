@@ -31,13 +31,12 @@ public class BaseTest {
 
     @AfterEach
     public void addAttachments() {
-        String sessionId = DriverUtils.getSessionId();
-
         AllureAttachments.addScreenshotAs("Last screenshot");
         AllureAttachments.addPageSource();
 //        AllureAttachments.addBrowserConsoleLogs();
 
         if (Project.isVideoOn()) {
+            String sessionId = DriverUtils.getSessionId();
             AllureAttachments.addVideo(sessionId);
         }
 
