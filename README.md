@@ -1,8 +1,24 @@
-# Project with automated tests
+# Demo project with UI tests for Habr.com
+
+![alt text](images/habr_main.png)
+
+# Technologies used:
+
+| GitHub | IntelliJ IDEA | Java  | Junit5  |  Gradle | Selenide  | Selenoid  | Jenkins |Allure Report  |
+|---|---|---|---|---|---|---|---|---|
+| ![alt text](images/GitHub.svg)  |  ![alt text](images/IntelijIdea.svg) |  ![alt text](images/Java.svg) | ![alt text](images/Junit5.svg)  | ![alt text](images/Gradle.svg)  | ![alt text](images/Selenide.svg)  |  ![alt text](images/Selenoid.svg) | ![alt text](images/Jenkins.svg)  | ![alt text](images/AllureReport.svg)  |
 
 # Jenkins job
 
 <a target="_blank" href="https://jenkins.autotests.cloud/job/08-ar2507-habr/">Jenkins demo Habr UI Tests</a>
+
+![alt text](images/jenkins_project.png)
+
+# Allure generates an informative report after each tests run
+
+![alt text](images/allure_1.png)
+
+![alt text](images/allure_2.png)
 
 # USAGE examples
 
