@@ -5,6 +5,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import demo.autotests.config.Project;
 import demo.autotests.helpers.AllureAttachments;
 import demo.autotests.helpers.DriverSettings;
+import demo.autotests.helpers.DriverUtils;
 import io.qameta.allure.junit5.AllureJunit5;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -30,14 +31,16 @@ public class BaseTest {
 
     @AfterEach
     public void addAttachments() {
+        String sessionId = DriverUtils.getSessionId();
+
         AllureAttachments.addScreenshotAs("Last screenshot");
         AllureAttachments.addPageSource();
-        AllureAttachments.addBrowserConsoleLogs();
+//        AllureAttachments.addBrowserConsoleLogs();
 
         Selenide.closeWebDriver();
 
         if (Project.isVideoOn()) {
-            AllureAttachments.addVideo();
+            AllureAttachments.addVideo(sessionId);
         }
     }
 }
