@@ -43,7 +43,9 @@ public class AllureAttachments {
             for (int i = 0; i < 10; i++) {
                 try {
                     videoInputStream = videoUrl.openStream();
-                    break;
+                    if (videoInputStream != null) {
+                        break;
+                    }
                 } catch (FileNotFoundException e) {
                     sleep(1000);
                 } catch (IOException e) {
