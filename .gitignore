@@ -40,3 +40,4 @@ target/
 .todo
 *.properties
 *.DS_Store
+settings.gradle

@@ -1,5 +1,5 @@
 # Demo project with UI tests for Habr.com
-
+###
 ![alt text](images/habr_main.png)
 
 # Technologies used:
@@ -12,21 +12,43 @@
 
 <a target="_blank" href="https://jenkins.autotests.cloud/job/08-ar2507-habr/">Jenkins demo Habr UI Tests</a>
 
+###
 ![alt text](images/jenkins_project.png)
 
 # Allure generates an informative report after each tests' run
 
+###
+
 ![alt text](images/allure_1.png)
+
+###
 
 ![alt text](images/allure_2.png)
 
 # And Telegram bot sends notifications to whom it may concern with Allure report URL
 
+###
+
 ![alt text](images/telegram_bot.png)
+
+# "Sign In" test video sample
+
+#### Steps
+
+1. Open main page
+2. Click user profile icon
+3. Click 'Sign In' button
+4. Fill the form with email and password
+5. Click 'Sign In' button
+6. Verify sign in is successful
+
+###
+
+![alt text](images/logInTest.gif)
 
 # USAGE examples
 
-### For run remote tests need fill remote.properties or to pass value:
+### It is needed to fill remote.properties or pass values to run tests:
 
 * browser (default chrome)
 * browserVersion (default 91.0)
