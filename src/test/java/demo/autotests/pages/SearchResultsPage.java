@@ -11,6 +11,9 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class SearchResultsPage extends MainPage {
+
+    private final String noResultsFoundText = "К сожалению, здесь пока нет ни одной публикации";
+
     private final SelenideElement
             searchField = $("[name='q']"),
             searchResultTabs = $(".tm-tabs"),
@@ -33,6 +36,6 @@ public class SearchResultsPage extends MainPage {
 
     @Step("Check search results")
     public void checkInvalidSearchResults() {
-        emptyResultsPlaceHolder.shouldHave(text("К сожалению, поиск в публикациях не дал результатов"));
+        emptyResultsPlaceHolder.shouldHave(text(noResultsFoundText));
     }
 }

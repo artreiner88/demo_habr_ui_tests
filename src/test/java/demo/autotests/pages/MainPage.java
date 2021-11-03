@@ -22,6 +22,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainPage {
 
+    private final String mainPageTitle = "Все публикации подряд / Хабр";
+    private final String becomeAuthorPageHeaderText = "Как стать автором";
+
     private final SelenideElement
             habrProjectsListsOpenButton = $(".tm-header__dropdown-toggle"),
             logo = $(".tm-header__logo"),
@@ -45,7 +48,7 @@ public class MainPage {
     @Step("Return to Home page")
     public void goToHomePage() {
         logo.click();
-        assertThat($("title").innerText()).isEqualTo("Все публикации подряд / Хабр");
+        assertThat($("title").innerText()).isEqualTo(mainPageTitle);
     }
 
     @Step("Check Habr projects list in header")
@@ -72,7 +75,7 @@ public class MainPage {
     @Step("Click How to become an author button")
     public void becomeAuthor() {
         becomeAuthorBtn.click();
-        pageHeader.shouldHave(text("Как стать автором"));
+        pageHeader.shouldHave(text(becomeAuthorPageHeaderText));
     }
 
     @Step("Switch to {mainNavBarItem} tab")

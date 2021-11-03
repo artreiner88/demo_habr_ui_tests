@@ -6,11 +6,14 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.switchTo;
 
 public class SignUpPage {
 
-    private final String url = "https://account.habr.com/register";
+    private final String pageHeaderTitle = "Регистрация";
+    private final String successfulRegistrationText = "Подтвердите почту";
+    private final String failedRegistrationText = "Форма содержит ошибки";
 
     private final SelenideElement
             errorNoticeTextBlock = $("#global_notices"),
@@ -25,15 +28,10 @@ public class SignUpPage {
             signUpButton = $("#registration_button"),
             signInLink = $(By.linkText("Войдите"));
 
-    @Step("Open Sign Up page")
-    public SignUpPage openSignUpPage() {
-        open(url);
-        return this;
-    }
 
     @Step("Check page header")
     public SignUpPage checkPageHeader() {
-        pageHeader.shouldHave(text("Регистрация"));
+        pageHeader.shouldHave(text(pageHeaderTitle));
         return this;
     }
 
@@ -52,11 +50,11 @@ public class SignUpPage {
 
     public void checkRegistrationIsSuccessful() {
         successRegistrationBlock.shouldBe(visible);
-        successRegistrationBlock.shouldHave(text("Подтвердите почту"));
+        successRegistrationBlock.shouldHave(text(successfulRegistrationText));
     }
 
     public void checkRegistrationIsFailed() {
-        errorNoticeTextBlock.shouldHave(text("Форма содержит ошибки"));
+        errorNoticeTextBlock.shouldHave(text(failedRegistrationText));
     }
 
     @Step("Go to Sign In page")

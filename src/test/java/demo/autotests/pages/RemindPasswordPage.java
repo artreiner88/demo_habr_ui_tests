@@ -10,6 +10,11 @@ import static com.codeborne.selenide.Selenide.switchTo;
 
 public class RemindPasswordPage {
 
+    private final String remindPasswordPageHeaderText = "Восстановление пароля";
+    private final String successfulRemindPasswordText = "Мы отправили вам на почту инструкции по восстановлению пароля.";
+    private final String incorrectEmailText = "Введите корректный e-mail";
+    private final String emailNotFoundText = "Пользователь с такой почтой не найден";
+
     private final SelenideElement
             header = $(".shadow-box__title"),
             failedBlock = $(".notice__text"), // Пользователь с такой почтой не найден
@@ -24,7 +29,7 @@ public class RemindPasswordPage {
 
     @Step("Check Remind password page header")
     public void checkPageHeader() {
-        header.shouldHave(text("Восстановление пароля"));
+        header.shouldHave(text(remindPasswordPageHeaderText));
     }
 
     @Step("Remind password with email '{email}'")
@@ -41,17 +46,17 @@ public class RemindPasswordPage {
     @Step("Check successful password remind message")
     public void checkSuccessfulPasswordRemindMessage() {
         successBlock.shouldBe(visible);
-        successBlock.shouldHave(text("Мы отправили вам на почту инструкции по восстановлению пароля."));
+        successBlock.shouldHave(text(successfulRemindPasswordText));
     }
 
     @Step("Check not valid email message")
     public void checkIncorrectEmailError() {
-        incorrectEmailMessage.shouldHave(text("Введите корректный e-mail"));
+        incorrectEmailMessage.shouldHave(text(incorrectEmailText));
     }
 
     @Step("Check email not found message")
     public void checkEmailNotFoundMessage() {
-        failedBlock.shouldHave(text("Пользователь с такой почтой не найден"));
+        failedBlock.shouldHave(text(emailNotFoundText));
     }
 
     @Step("Go to Sign in page")
