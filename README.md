@@ -47,7 +47,7 @@
 
 ![alt text](images/logInTest.gif)
 
-# USAGE examples
+# Usage examples
 
 ### It needs to fill remote.properties or pass values to run tests:
 
