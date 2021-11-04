@@ -49,6 +49,8 @@
 
 # Usage examples
 
+Note: gradle should be installed previously
+
 ### It needs to fill remote.properties or pass values to run tests:
 
 * browser (default chrome)
