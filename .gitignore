@@ -40,3 +40,4 @@ target/
 *.properties
 *.DS_Store
 settings.gradle
+gradle/
