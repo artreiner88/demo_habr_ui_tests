@@ -1,4 +1,5 @@
 # Demo project with UI tests for Habr.com
+<a target="_blank" href="https://habr.com/ru">Habr website</a>
 ###
 ![alt text](images/habr_main.png)
 
@@ -10,7 +11,7 @@
 
 # Jenkins job
 
-<a target="_blank" href="https://jenkins.autotests.cloud/job/08-ar2507-habr/">Jenkins demo Habr UI Tests</a>
+<a target="_blank" href="https://jenkins.autotests.cloud/job/08-ar2507-habr/">Jenkins Habr UI Tests project</a>
 
 ###
 ![alt text](images/jenkins_project.png)
@@ -48,7 +49,7 @@
 
 # USAGE examples
 
-### It is needed to fill remote.properties or pass values to run tests:
+### It needs to fill remote.properties or pass values to run tests:
 
 * browser (default chrome)
 * browserVersion (default 91.0)
