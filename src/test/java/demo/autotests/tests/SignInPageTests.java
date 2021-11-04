@@ -16,9 +16,9 @@ public class SignInPageTests extends BaseTest {
 
     MainPage mainPage = new MainPage();
 
-    String email = Project.config.email();
-    String nickName = Project.config.nickName();
-    String password = Project.config.password();
+    String email = Project.credentials.email();
+    String nickName = Project.credentials.nickName();
+    String password = Project.credentials.password();
 
     @Test
     @DisplayName("Sign In as existed user")

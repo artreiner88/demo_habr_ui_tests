@@ -25,15 +25,5 @@ public interface ProjectConfig extends Config {
     @DefaultValue("")
     String videoStorage();
 
-    @DefaultValue("")
-    String email();
-
-    @DefaultValue("")
-    String notExistedEmail();
-
-    @DefaultValue("")
-    String password();
-
-    @DefaultValue("")
-    String nickName();
+    int threads();
 }

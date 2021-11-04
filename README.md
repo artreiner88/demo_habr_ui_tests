@@ -51,22 +51,22 @@
 
 Note: gradle should be installed previously
 
-### It needs to fill remote.properties or pass values to run tests:
+### It needs to fill local.properties or pass values to run tests:
 
 * browser (default chrome)
 * browserVersion (default 91.0)
 * browserSize (default 1920x1080)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
+* remoteDriverUrl (selenoid or grid url address). If empty, tests run locally
+* videoStorage (url address where you should get video). Empty if remoteDriverUrl is empty
 * threads (number of threads)
 
-Run tests with filled remote.properties:
+Run tests with filled local.properties:
 
 ```bash
 gradle clean test
 ```
 
-Run tests with not filled remote.properties:
+Run tests with not filled local.properties:
 
 ```bash
 gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test

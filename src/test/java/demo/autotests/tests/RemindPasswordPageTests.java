@@ -17,8 +17,8 @@ public class RemindPasswordPageTests extends BaseTest {
 
     MainPage mainPage = new MainPage();
     RemindPasswordPage remindPasswordPage;
-    String email = Project.config.email();
-    String notExistedEmail = Project.config.notExistedEmail();
+    String email = Project.credentials.email();
+    String notExistedEmail = Project.credentials.notExistedEmail();
 
     @Test
     @DisplayName("Existing user can retrieve his password")

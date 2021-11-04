@@ -17,9 +17,9 @@ public class SignUpPageTests extends BaseTest {
     MainPage mainPage = new MainPage();
     SignUpPage signUpPage = new SignUpPage();
 
-    String email = Project.config.email();
-    String password = Project.config.password();
-    String nickName = Project.config.nickName();
+    String email = Project.credentials.email();
+    String password = Project.credentials.password();
+    String nickName = Project.credentials.nickName();
 
     @Test
     @DisplayName("User can sign up")
