@@ -14,7 +14,7 @@
 <a target="_blank" href="https://jenkins.autotests.cloud/job/08-ar2507-habr/">Jenkins Habr UI Tests project</a>
 
 ###
-![alt text](images/jenkins_project.png)
+![alt text](images/jenkins_1.png)
 
 # Allure generates an informative report after each tests' run
 
