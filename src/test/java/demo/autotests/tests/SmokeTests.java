@@ -16,6 +16,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @Tag("smoke")
 @Epic("Smoke tests")
+@Story("Smoke")
 public class SmokeTests extends BaseTest {
 
     @Test
