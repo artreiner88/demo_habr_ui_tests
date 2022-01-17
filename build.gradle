@@ -51,11 +51,11 @@ tasks.withType(Test) {
     useJUnitPlatform()
 
     systemProperties += [
-            'junit.jupiter.execution.parallel.enabled'                 : System.getProperty("parallel", "false"),
+            'junit.jupiter.execution.parallel.enabled'                 : System.getProperty("parallel", "true"),
             'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
             'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
             'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
-            'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads", "2").toInteger()
+            'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads", "1").toInteger()
     ]
 
     testLogging {

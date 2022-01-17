@@ -69,7 +69,7 @@ gradle clean test
 Run tests with not filled local.properties:
 
 ```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
+gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dparallel=true -Dthreads=4 test
 ```
 
 Note: authorization required to run the command above. "%s:%s" should be replaced with login:password
