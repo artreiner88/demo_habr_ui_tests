@@ -38,6 +38,7 @@ target/
 /gradlew.bat
 .todo
 *.properties
+credentials.properties
 *.DS_Store
 settings.gradle
 gradle/
