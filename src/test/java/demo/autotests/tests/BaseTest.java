@@ -26,7 +26,7 @@ public class BaseTest {
 
     @BeforeEach
     public void openMainPage() {
-        open("https://habr.com/ru");
+        open("/");
     }
 
     @AfterEach

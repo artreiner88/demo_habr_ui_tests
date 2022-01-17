@@ -1,5 +1,6 @@
 package demo.autotests.tests;
 
+import demo.autotests.config.Credentials;
 import demo.autotests.config.Project;
 import demo.autotests.pages.MainPage;
 import demo.autotests.pages.RemindPasswordPage;
@@ -16,9 +17,9 @@ public class SignInPageTests extends BaseTest {
 
     MainPage mainPage = new MainPage();
 
-    String email = Project.credentials.email();
-    String nickName = Project.credentials.nickName();
-    String password = Project.credentials.password();
+    String email = Credentials.credentials.email();
+    String nickName = Credentials.credentials.nickName();
+    String password = Credentials.credentials.password();
 
     @Test
     @DisplayName("Sign In as existed user")

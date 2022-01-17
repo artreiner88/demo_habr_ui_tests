@@ -1,5 +1,6 @@
 package demo.autotests.tests;
 
+import demo.autotests.config.Credentials;
 import demo.autotests.config.Project;
 import demo.autotests.pages.MainPage;
 import demo.autotests.pages.SignInPage;
@@ -17,9 +18,9 @@ public class SignUpPageTests extends BaseTest {
     MainPage mainPage = new MainPage();
     SignUpPage signUpPage = new SignUpPage();
 
-    String email = Project.credentials.email();
-    String password = Project.credentials.password();
-    String nickName = Project.credentials.nickName();
+    String email = Credentials.credentials.email();
+    String password = Credentials.credentials.password();
+    String nickName = Credentials.credentials.nickName();
 
     @Test
     @DisplayName("User can sign up")

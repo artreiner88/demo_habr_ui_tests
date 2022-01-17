@@ -1,5 +1,6 @@
 package demo.autotests.tests;
 
+import demo.autotests.config.Credentials;
 import demo.autotests.config.Project;
 import demo.autotests.pages.MainPage;
 import demo.autotests.pages.RemindPasswordPage;
@@ -17,8 +18,8 @@ public class RemindPasswordPageTests extends BaseTest {
 
     MainPage mainPage = new MainPage();
     RemindPasswordPage remindPasswordPage;
-    String email = Project.credentials.email();
-    String notExistedEmail = Project.credentials.notExistedEmail();
+    String email = Credentials.credentials.email();
+    String notExistedEmail = Credentials.credentials.notExistedEmail();
 
     @Test
     @DisplayName("Existing user can retrieve his password")
