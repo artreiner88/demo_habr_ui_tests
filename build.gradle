@@ -66,11 +66,6 @@ tasks.withType(Test) {
         }
     }
 }
-task props(type: Test) {
-    useJUnitPlatform {
-        includeTags 'props'
-    }
-}
 
 task smokeTests(type: Test) {
     useJUnitPlatform {
