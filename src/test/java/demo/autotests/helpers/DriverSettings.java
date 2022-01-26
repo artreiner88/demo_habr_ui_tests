@@ -11,9 +11,7 @@ public class DriverSettings {
         Configuration.browser = Project.config.browser();
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
-        Configuration.baseUrl = EnvironmentSettings.getEnvironment();
-//        Configuration.baseUrl = Project.environmentConfig.webUrl();
-        System.out.println("Base url is " + Configuration.baseUrl);
+        Configuration.baseUrl = EnvironmentSettings.getEnvironmentUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();
