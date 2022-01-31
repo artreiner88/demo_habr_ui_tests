@@ -3,7 +3,7 @@ package demo.autotests.tests;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import demo.autotests.config.Project;
-import demo.autotests.helpers.Attachments;
+import demo.autotests.helpers.AllureAttachments;
 import demo.autotests.helpers.DriverSettings;
 import demo.autotests.helpers.DriverUtils;
 import io.qameta.allure.junit5.AllureJunit5;
@@ -14,6 +14,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import static com.codeborne.selenide.Selenide.open;
+
 
 @ExtendWith({AllureJunit5.class})
 public class BaseTest {
@@ -32,12 +33,14 @@ public class BaseTest {
     public void addAttachments() {
         String sessionId = DriverUtils.getSessionId();
 
-        Attachments.addScreenshotAs("Last screenshot");
-        Attachments.addPageSource();
+        AllureAttachments.addScreenshotAs("Last screenshot");
+        AllureAttachments.addPageSource();
+//        AllureAttachments.addBrowserConsoleLogs();
+
         Selenide.closeWebDriver();
 
         if (Project.isVideoOn()) {
-            Attachments.addVideo(sessionId);
+            AllureAttachments.addVideo(sessionId);
         }
     }
 }
