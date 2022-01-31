@@ -2,7 +2,7 @@ package demo.autotests.helpers;
 
 import io.qameta.allure.Attachment;
 
-public class AllureAttachments {
+public class Attachments {
 
     @Attachment(value = "{attachName}", type = "text/plain")
     private static String addMessage(String attachName, String text) {
