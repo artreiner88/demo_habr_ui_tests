@@ -2,7 +2,7 @@ package demo.autotests.config;
 
 import org.aeonbits.owner.ConfigFactory;
 
-public class Environment {
+public interface Environment {
 
-    public static EnvironmentConfig environmentConfig = ConfigFactory.create(EnvironmentConfig.class, System.getProperties());
+    EnvironmentConfig environmentConfig = ConfigFactory.create(EnvironmentConfig.class, System.getProperties());
 }
