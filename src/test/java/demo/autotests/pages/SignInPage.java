@@ -5,9 +5,12 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class SignInPage {
+
+    private final String pageHeaderText = "Вход";
 
     private final SelenideElement
             pageHeader = $(".shadow-box__title"),
@@ -17,13 +20,13 @@ public class SignInPage {
             remindPasswordLink = $(".form__remind-password-link"),
             signUpLink = $(By.linkText("Зарегистрируйтесь"));
 
-    @Step("Check page header")
+    @Step("Check page header text")
     public SignInPage checkPageHeader() {
-        pageHeader.shouldHave(text("Вход"));
+        pageHeader.shouldHave(text(pageHeaderText));
         return this;
     }
 
-    @Step("Sign In with email '{email}' and password '{password}'")
+    @Step("Sign in")
     public MainPage signIn(String email, String password) {
         emailInputField.setValue(email);
         passwordInputField.setValue(password);
@@ -31,14 +34,13 @@ public class SignInPage {
         return new MainPage();
     }
 
-    public RemindPasswordPage remindPassword() {
-        remindPasswordLink.click();
-        return new RemindPasswordPage();
+    @Step("Verify 'Remind password' button is visible")
+    public void remindPasswordButtonShouldBeVisible() {
+        remindPasswordLink.shouldBe(visible);
     }
 
-    @Step("Click Sign Up link")
-    public SignUpPage signUp() {
-        signUpLink.click();
-        return new SignUpPage();
+    @Step("Verify 'Sign up' button is visible")
+    public void signUpButtonShouldBeVisible() {
+        signUpLink.shouldBe(visible);
     }
 }

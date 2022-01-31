@@ -7,13 +7,11 @@ repositories {
     mavenCentral()
 }
 
-def allureVersion = '2.15.0',
-    aspectjVersion = '1.9.7',
+def allureVersion = '2.17.2',
     selenideVersion = "5.24.0",
-    junitVersion = '5.8.1',
-    restAssuredVersion = '4.4.0',
+    junitVersion = '5.8.2',
     ownerVersion = '1.0.12',
-    assertjVersion = '3.21.0'
+    assertjVersion = '3.22.0'
 
 allure {
     version = allureVersion
@@ -27,16 +25,13 @@ allure {
 
 dependencies {
     testImplementation(
-            "org.aspectj:aspectjweaver:$aspectjVersion",
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
-            "io.rest-assured:rest-assured:$restAssuredVersion",
-            "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.aeonbits.owner:owner:$ownerVersion",
            "org.assertj:assertj-core:$assertjVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion")
     testRuntimeOnly(
-            'org.slf4j:slf4j-simple:1.7.32',
+            'org.slf4j:slf4j-simple:1.7.33',
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
@@ -79,15 +74,21 @@ task mainTests(type: Test) {
     }
 }
 
+task authorTests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'author'
+    }
+}
+
 task searchTests(type: Test) {
     useJUnitPlatform {
         includeTags 'search'
     }
 }
 
-task signInPageTests(type: Test) {
+task signInTests(type: Test) {
     useJUnitPlatform {
-        includeTags 'SignInPageTests'
+        includeTags 'signIn'
     }
 }
 
