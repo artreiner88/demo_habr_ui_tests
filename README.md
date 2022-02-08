@@ -58,7 +58,6 @@ Note: gradle should be installed previously
 * browserSize (default 1920x1080)
 * remoteDriverUrl (selenoid or grid url address). If empty, tests run locally
 * videoStorage (url address where you should get video). Empty if remoteDriverUrl is empty
-* threads (number of threads)
 
 Run tests with filled local.properties:
 
@@ -69,7 +68,7 @@ gradle clean test
 Run tests with not filled local.properties:
 
 ```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dparallel=true -Dthreads=4 test
+gradle clean test -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=4
 ```
 
 Note: authorization required to run the command above. "%s:%s" should be replaced with login:password
