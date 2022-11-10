@@ -34,11 +34,5 @@ target/
 .project
 .settings/org.eclipse.buildship.core.prefs
 .vscode
-/gradlew
-/gradlew.bat
 .todo
-*.properties
-credentials.properties
 *.DS_Store
-settings.gradle
-gradle/

@@ -47,8 +47,6 @@
 
 # Usage examples
 
-Note: gradle should be installed previously
-
 ### It needs to fill local.properties or pass values to run tests:
 
 * browser (default chrome)
@@ -57,22 +55,22 @@ Note: gradle should be installed previously
 * remoteDriverUrl (selenoid or grid url address). If empty, tests run locally
 * videoStorage (url address where you should get video). Empty if remoteDriverUrl is empty
 
-Run tests with filled local.properties:
+Run all tests:
 
 ```bash
-gradle clean test
+./gradlew clean test
 ```
 
-Run tests with not filled local.properties:
+Run tests with properties:
 
 ```bash
-gradle clean test -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=4
+./gradlew clean test -Dbrowser=chrome -DbrowserSize=1920x1080 -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=4
 ```
 
 Note: authorization required to run the command above. "%s:%s" should be replaced with login:password
 
-Serve report:
+Generate Allure report:
 
 ```bash
-gradle allureServe
+./gradlew allureServe
 ```
