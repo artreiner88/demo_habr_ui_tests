@@ -47,7 +47,7 @@
 
 # Usage examples
 
-### It needs to fill local.properties or pass values to run tests:
+### It needs to fill local.properties or pass values into system properties to run tests:
 
 * browser (default chrome)
 * browserVersion (default 91.0)
